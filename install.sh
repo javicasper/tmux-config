@@ -35,10 +35,6 @@ fi
 ln -s "$SRC" "$DEST"
 echo "🔗 $DEST -> $SRC"
 
-# 2.5) Avisar de dependencias opcionales de algunos plugins
-command -v fzf   >/dev/null 2>&1 || echo "⚠  'fzf' no encontrado (lo usan sessionx y fzf-url).  Termux: pkg install fzf"
-command -v cargo >/dev/null 2>&1 || echo "⚠  'cargo/rust' no encontrado (lo necesita tmux-thumbs para compilar).  Termux: pkg install rust"
-
 # 3) Instalar TPM (gestor de plugins) si no está
 if [ ! -d "$TPM_DIR" ]; then
   echo "⬇  Instalando TPM en $TPM_DIR"
