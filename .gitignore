@@ -1,0 +1,8 @@
+# Backups que genera install.sh
+.tmux.conf.backup.*
+
+# Plugins de TPM (se instalan localmente, no se versionan)
+.tmux/plugins/
+
+# Basura del sistema
+.DS_Store
