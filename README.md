@@ -8,7 +8,18 @@ máquina y mantener siempre sincronizada vía git.
 - Tema [Catppuccin] (mocha) — requiere una Nerd Font en el cliente
 - Persistencia de sesiones con [resurrect] + [continuum]
 - Buscador fuzzy de sesiones con [sessionx] (`C-a o`)
+- Terminal flotante con [floax] (`C-a p`)
+- Copiar texto/rutas/URLs con hints vía [thumbs] (`C-a F`)
+- Abrir URLs de la pantalla con [fzf-url] (`C-a u`)
 - Plugins gestionados con [TPM]
+
+## Dependencias opcionales
+
+Algunos plugins necesitan herramientas extra (el `install.sh` te avisa si faltan):
+
+- **fzf** — lo usan sessionx y fzf-url → `pkg install fzf` (Termux) / `apt install fzf`
+- **rust/cargo** — tmux-thumbs lo compila al instalarse → `pkg install rust` (Termux) / `apt install cargo`
+- Una **Nerd Font** en el cliente para los iconos de Catppuccin
 
 ## Instalación en una máquina nueva
 
@@ -60,7 +71,10 @@ Luego recarga dentro de tmux con `C-a r`.
 | [resurrect] | Guardar/restaurar sesiones manualmente |
 | [continuum] | Autoguardado y restauración automática |
 | [sessionx] | Gestor fuzzy de sesiones con preview |
-| [Catppuccin] | Tema |
+| [floax] | Terminal flotante (popup) con `C-a p` |
+| [fzf-url] | Abrir URLs de la pantalla con fzf (`C-a u`) |
+| [thumbs] | Copiar rutas/hashes/URLs con hints (`C-a F`) |
+| [Catppuccin] | Tema (v2, pineado a v2.3.0) |
 
 [TPM]: https://github.com/tmux-plugins/tpm
 [tpm]: https://github.com/tmux-plugins/tpm
@@ -68,4 +82,7 @@ Luego recarga dentro de tmux con `C-a r`.
 [resurrect]: https://github.com/tmux-plugins/tmux-resurrect
 [continuum]: https://github.com/tmux-plugins/tmux-continuum
 [sessionx]: https://github.com/omerxx/tmux-sessionx
+[floax]: https://github.com/omerxx/tmux-floax
+[fzf-url]: https://github.com/wfxr/tmux-fzf-url
+[thumbs]: https://github.com/fcsonline/tmux-thumbs
 [Catppuccin]: https://github.com/catppuccin/tmux
